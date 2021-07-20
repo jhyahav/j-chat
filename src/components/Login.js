@@ -6,7 +6,11 @@ function Login({auth}) {
         auth.signInWithPopup(provider);
     }
     return (
-        <button onClick={GoogleLogin}>Log in with Google</button>
+        <>
+            <h1>Welcome to j-chat</h1>
+            <h2>To enter the chatroom, please sign in</h2>
+            <button onClick={GoogleLogin}>Log in with Google</button>
+        </>
     );
 
 }

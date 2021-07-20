@@ -22,7 +22,6 @@ function Chatroom(props) {
             displayName
         })
         setFormValue('');
-        //scrollRef.current.scrollIntoView({behavior: 'smooth'});
     }
     
 

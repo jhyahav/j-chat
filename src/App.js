@@ -4,7 +4,6 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import {useAuthState} from 'react-firebase-hooks/auth';
-//import {useCollectionData} from 'react-firebase-hooks/firestore';
 import Login from './components/Login';
 import LogOut from './components/LogOut';
 import Chatroom from './components/Chatroom';
