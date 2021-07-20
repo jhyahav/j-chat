@@ -32,7 +32,7 @@ function App() {
       <header>
       </header>
       <div>
-          {user ? <Chatroom firestore={firestore}/> : <Login auth={auth}/>}
+          {user ? <Chatroom firestore={firestore} auth={auth}/> : <Login auth={auth}/>}
           <LogOut auth={auth}/>
       </div>
 
