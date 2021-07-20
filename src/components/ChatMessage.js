@@ -4,6 +4,7 @@ function ChatMessage(props) {
     return (
         <div className={`message {messageType}`}>
             <img src={props.message.photoURL}/>
+            <p>{props.message.displayName}</p>
             <p>{props.message.text}</p>
         </div>
     );

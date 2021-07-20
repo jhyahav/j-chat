@@ -11,12 +11,13 @@ function Chatroom(props) {
     const [formValue, setFormValue] = useState('');
     const sendMessage = async(event) => {
         event.preventDefault();
-        const {uid, photoURL} = props.auth.currentUser;
+        const {uid, photoURL, displayName} = props.auth.currentUser;
         await messagesRef.add({
             text: formValue,
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             uid,
-            photoURL
+            photoURL,
+            displayName
         })
         setFormValue('');
     }
