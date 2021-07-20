@@ -1,11 +1,15 @@
-function ChatMessage(props) {
 
-    const messageType = props.message.uid === props.auth.currentUser.uid ? 'sent' : 'received';
+function ChatMessage(props) {
+    const { uid, text, displayName, photoURL, createdAt } = props.message;
+    const messageType = uid === props.auth.currentUser.uid ? 'sent' : 'received';
+    const date = createdAt ? createdAt.toDate().toLocaleString() : '';
+
     return (
-        <div className={`message {messageType}`}>
-            <img src={props.message.photoURL}/>
-            <p>{props.message.displayName}</p>
-            <p>{props.message.text}</p>
+        <div className={`message ${messageType}`}>
+            <img src={photoURL} alt={`User profile: ${displayName}`} />
+            <p>{displayName}</p>
+            <p>{text}</p>
+            <p>{date}</p>
         </div>
     );
 }
