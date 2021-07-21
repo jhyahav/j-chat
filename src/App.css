@@ -65,6 +65,16 @@ svg {
 }
 
 /*Message and contents, incl. style variants for sent and received messages*/
+main {
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding: 5px;
+  height: 80vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
 .message {
   display: flex;
   align-items: center;
@@ -82,7 +92,7 @@ svg {
 }
 
 .received {
-  text-align: left;
+  text-align: inherit;
 }
 
 .profile-pic {
@@ -112,14 +122,14 @@ input {
 
 
 /*Scrollbar*/
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.3rem;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--green-6);
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background-color: black;
 }

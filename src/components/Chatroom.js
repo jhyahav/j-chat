@@ -24,18 +24,20 @@ function Chatroom(props) {
         })
         setFormValue('');
     }
-    
+    const isLegalInput = (string) => {
+        return (!string.match(/^\s*$/)) && (string.length < 180);
+    }
 
     return (
         <>
-            <div>
-                {messages && messages.map(mes => <ChatMessage key={mes.id} message={mes} auth={props.auth}/>)}
-            </div>
-
-            <div ref={scrollRef}></div>
-
+            <main>
+                <div>
+                    {messages && messages.map(mes => <ChatMessage key={mes.id} message={mes} auth={props.auth}/>)}
+                </div>
+                <div ref={scrollRef}></div>
+            </main>
             <form onSubmit={sendMessage}>
-                <button id='send-button' type="submit">
+                <button id='send-button' type='submit' disabled={!isLegalInput(formValue)}>
                     <SendIcon id='send-icon'/>
                 </button>
                 <input value={formValue} onChange={(event) => setFormValue(event.target.value)}/>
