@@ -24,6 +24,7 @@ body {
   text-transform: lowercase;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  overflow-y: hidden;
 }
 
 .App>div {
@@ -43,6 +44,7 @@ header {
   justify-content: space-between;
   width: 100%;
   max-width: inherit;
+  height: 10vh;
   background-color: var(--green-0);
   border-bottom: 1px solid white;
   font-style: italic;
@@ -69,7 +71,7 @@ main {
   display: flex;
   overflow-y: scroll;
   flex-direction: column;
-  padding: 5px;
+  box-sizing: border-box;
   height: 80vh;
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -117,7 +119,7 @@ input {
 }
 
 #send-icon {
-  rotate: 135deg;
+  transform: rotate(-45deg);
 }
 
 
