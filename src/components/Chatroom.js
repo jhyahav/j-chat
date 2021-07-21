@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { useEffect, useRef, useState } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import SendIcon from '@material-ui/icons/Send';
 import ChatMessage from './ChatMessage';
 
 function Chatroom(props) {
@@ -34,9 +35,10 @@ function Chatroom(props) {
             <div ref={scrollRef}></div>
 
             <form onSubmit={sendMessage}>
+                <button id='send-button' type="submit">
+                    <SendIcon id='send-icon'/>
+                </button>
                 <input value={formValue} onChange={(event) => setFormValue(event.target.value)}/>
-                <button type="submit">Send</button>
-
             </form>
 
         </>

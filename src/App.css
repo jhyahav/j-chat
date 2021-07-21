@@ -1,3 +1,4 @@
+/*General styles*/
 :root {
   --green-0: #001c00;
   --green-1: #004b23;
@@ -10,13 +11,107 @@
   --green-8: #ccff33;
 }
 
+.App {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
-  background-color: var(--green-0);
+  box-sizing: border-box;
+  background-color: #2a422a;
   text-transform: lowercase;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
+.App>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, black 0%, var(--green-0) 66%, var(--green-1) 100%);
+}
+
+/*Header*/
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: inherit;
+  background-color: var(--green-0);
+  border-bottom: 1px solid white;
+  font-style: italic;
+}
+
+header * {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+/*Message and contents, incl. style variants for sent and received messages*/
+.message {
+  display: flex;
+  align-items: center;
+  text-transform: none;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.message-text {
+  font-family: 'Heebo', sans-serif;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.received {
+  text-align: left;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+/*Message composition input box + send button*/
+form {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 800px;
+  height: 10vh;
+}
+
+input {
+  width: 100%;
+  max-width: inherit;
+}
+
+#send-icon {
+  rotate: 135deg;
+}
+
+
+/*Scrollbar*/
 body::-webkit-scrollbar {
   width: 0.3rem;
 }
@@ -28,24 +123,3 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: black;
 }
-
-.App {
-  text-align: center;
-}
-
-.message {
-  text-transform: none;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.sent {
-  text-align: right;
-}
-
-.received {
-  text-align: left;
-}
-
-
-

@@ -9,7 +9,7 @@ function Login({auth}) {
         <>
             <h1>Welcome to j-chat</h1>
             <h2>To enter the chatroom, please sign in</h2>
-            <button onClick={GoogleLogin}>Log in with Google</button>
+            <button id='login' onClick={GoogleLogin}>Log in with Google</button>
         </>
     );
 

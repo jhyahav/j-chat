@@ -1,7 +1,10 @@
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function LogOut({auth}) {
     return auth.currentUser && (
-        <button onClick={() => auth.signOut()}>Log out</button>
+        <button id='logout' onClick={() => auth.signOut()}>
+            <ExitToAppIcon/>
+        </button>
     );
 }
 
