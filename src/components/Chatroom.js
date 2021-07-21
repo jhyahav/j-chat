@@ -7,7 +7,7 @@ import ChatMessage from './ChatMessage';
 
 function Chatroom(props) {
     const messagesRef = props.firestore.collection('messages');
-    const messageQuery = messagesRef.orderBy('createdAt', 'asc').limitToLast(15);
+    const messageQuery = messagesRef.orderBy('createdAt', 'asc').limitToLast(50);
     const [messages] = useCollectionData(messageQuery, {idField: 'id'});
     const [formValue, setFormValue] = useState('');
     const scrollRef = useRef();
