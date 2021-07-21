@@ -55,6 +55,15 @@ header * {
   margin-left: 1rem;
 }
 
+#logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+}
+
 #logo-container {
   display: flex;
   align-items: center;
@@ -89,9 +98,11 @@ main {
   font-family: 'Heebo', sans-serif;
   padding: 10px;
   border-radius: 20px;
-  text-align: justify;
+  text-align: start;
+  unicode-bidi: plaintext;
   max-width: 70%;
   margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .sent {
@@ -116,6 +127,11 @@ main {
   margin-top: 0;
 }
 
+.display-name {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
 .profile-pic {
   border-radius: 50%;
   width: 3rem;
@@ -135,6 +151,8 @@ form {
 input {
   width: 100%;
   max-width: inherit;
+  text-align: start;
+  unicode-bidi: plaintext;
 }
 
 #send-icon {
