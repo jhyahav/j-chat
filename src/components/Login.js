@@ -1,4 +1,5 @@
 import firebase from 'firebase/app';
+import VpnKeySharpIcon from '@material-ui/icons/VpnKeySharp';
 
 function Login({auth}) {
     function GoogleLogin() {
@@ -7,9 +8,12 @@ function Login({auth}) {
     }
     return (
         <>
-            <h1>Welcome to j-chat</h1>
+            <h1>Welcome to j-chat;</h1>
             <h2>To enter the chatroom, please sign in</h2>
-            <button id='login' onClick={GoogleLogin}>Log in with Google</button>
+            <button id='login' onClick={GoogleLogin}>
+                <VpnKeySharpIcon id='key-icon'/>
+                Log in with Google
+            </button>
         </>
     );
 

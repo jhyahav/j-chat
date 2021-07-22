@@ -36,11 +36,11 @@ function Chatroom(props) {
                 </div>
                 <div ref={scrollRef}></div>
             </main>
-            <form onSubmit={sendMessage}>
+            <form spellCheck='false' onSubmit={sendMessage}>
+                <input value={formValue} onChange={(event) => setFormValue(event.target.value)}/>
                 <button id='send-button' type='submit' disabled={!isLegalInput(formValue)}>
                     <SendIcon id='send-icon'/>
                 </button>
-                <input value={formValue} onChange={(event) => setFormValue(event.target.value)}/>
             </form>
 
         </>
