@@ -7,9 +7,11 @@ function ChatMessage(props) {
 
     return (
         <div className={`message ${messageType}`}>
-            <img className='profile-pic' src={photoURL} alt={`User profile: ${displayName}`} />
             <p className='display-name'>{fullDisplayName}</p>
-            <p className='message-text'>{text}</p>
+            <div className='text-pic-wrapper'>
+                <img className='profile-pic' src={photoURL} alt={`User profile: ${displayName}`} />
+                <p className='message-text'>{text}</p>
+            </div>
             <p className='date'>{date}</p>
         </div>
     );

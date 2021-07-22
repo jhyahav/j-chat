@@ -1,5 +1,6 @@
 /*General styles*/
 :root {
+  --greengrey: #052205;
   --green-0: #001c00;
   --green-1: #004b23;
   --green-2: #006400;
@@ -32,7 +33,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(180deg, black 0%, var(--green-0) 66%, var(--green-1) 100%);
+  background: linear-gradient(180deg, black 0%, var(--green-0) 50%, var(--green-1) 100%);
 }
 
 /*Header*/
@@ -90,19 +91,28 @@ main {
   display: flex;
   flex-direction: column;
   text-transform: none;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.text-pic-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sent .text-pic-wrapper {
+  flex-direction: row-reverse;
 }
 
 .message-text {
   font-family: 'Heebo', sans-serif;
+  font-size: 1.25rem;
   padding: 10px;
   border-radius: 20px;
   text-align: start;
   unicode-bidi: plaintext;
   max-width: 70%;
-  margin-bottom: 0.25rem;
-  margin-top: 0.25rem;
+  margin: 0.25rem;
 }
 
 .sent {
@@ -134,8 +144,8 @@ main {
 
 .profile-pic {
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /*Message composition input box + send button*/
@@ -153,11 +163,24 @@ input {
   max-width: inherit;
   text-align: start;
   unicode-bidi: plaintext;
+  background-color: var(--greengrey);
+  color: white;
+  outline: none;
+  text-indent: 1rem;
+  font-size: 1.5rem;
+}
+
+input:focus-visible {
+  outline: none;
 }
 
 #send-icon {
   transform: rotate(-45deg);
 }
+
+/*#send-button:disabled {
+  opacity: 100%;
+}*/
 
 
 /*Scrollbar*/
