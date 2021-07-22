@@ -1,8 +1,37 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    
     match /{document=**} {
       allow read, write: if false;
+    }
+    
+    match /messages/{docId} {
+    	allow read: if isSignedIn();
+      allow create: if canCreateMessage();
+    }
+    function isSignedIn() {
+    	return (request.auth.uid != null);      
+    }
+    
+    function isOwner() {
+    	return (request.auth.uid == request.resource.data.uid);
+    }
+    
+    function isNow(){ 
+    	return (request.time == request.resource.data.createdAt);
+    }
+    
+    function isLegalLength() {
+    	return (request.resource.data.text.size() <= 180);
+    }
+    
+    function isNotBanned() {
+    	return (exists(/databases/$(database)/documents/banned/$(request.auth.uid)) == false)
+    }
+    
+    function canCreateMessage() {
+    	return isSignedIn() && isOwner() && isNow() && isLegalLength() && isNotBanned();
     }
   }
 }
