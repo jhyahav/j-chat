@@ -41,26 +41,36 @@ body {
 button {
   cursor: pointer;
   appearance: none;
+  border-style: none;
 }
 
 button:disabled {
   cursor: default;
 }
 
+button:active {
+  border-style: none;
+}
+
 /*Login*/
 
 #login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   height: 20vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #004b23;
   text-transform: lowercase;
   border-radius: 30px;
 }
 
 #key-icon {
   font-size: 3rem;
+  margin-right: 1rem;
 }
 
 /*Header*/
@@ -93,7 +103,11 @@ header * {
   border-radius: 0.5rem;
   background-color: var(--green-3);
   color: white;
+}
+
+#logout:focus-visible {
   outline: none;
+  outline-color: none;
 }
 
 #logo-container {
@@ -187,7 +201,7 @@ form {
   height: 10vh;
 }
 
-input {
+textarea {
   width: 100%;
   font-family: 'Heebo', sans-serif;
   max-width: inherit;
@@ -196,8 +210,10 @@ input {
   background-color: var(--greenblack);
   color: white;
   border-style: none;
-  text-indent: 1rem;
-  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.25rem;
+  resize: none;
 }
 
 form>:focus-visible {
@@ -216,11 +232,8 @@ form>:focus-visible {
 }
 
 #send-button:disabled {
-  opacity: 33%;
+  opacity: 0.33;
 }
-
-
-
 
 /*Scrollbar*/
 ::-webkit-scrollbar {
