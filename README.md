@@ -13,7 +13,7 @@
 <h3 align="center">j-chat;</h3>
 
   <p align="center">
-    A simple live group chat web app.
+    A simple responsive live group chat web app.
   </p>
 </div>
 
