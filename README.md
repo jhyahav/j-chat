@@ -6,14 +6,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jhyahav/j-chatroom">
-    <img src="public/logo.svg" alt="chatroom icon" width="80" height="80">
+  <a href="https://github.com/jhyahav/j-chat">
+    <img src="public/logo.svg" alt="j-chat icon" width="80" height="80">
   </a>
 
 <h3 align="center">j-chat;</h3>
 
   <p align="center">
-    A simple live group chatroom web app.
+    A simple responsive live group chat web app.
   </p>
 </div>
 
@@ -23,7 +23,7 @@
 
 [![screenshot of j-chatroom][product-screenshot]](https://j-chatroom.web.app/)
 
-This mini-project was one of the first web apps I built. Using Google authentication, it enables users to send and receive text-based messages in real time. The chatroom supports both left-to-right and right-to-left text, as well as emojis. The message data is stored in a Firestore database and updated whenever a new message is sent. Since the core functionality of the web app is based on a tutorial (see <a href="#acknowledgments">Acknowledgments</a>), I spent a lot of time making it my own by adding new features (e.g. bidirectional text support, time stamps and usernames on messages) and by revamping the design to my liking.
+This mini-project was one of the first web apps I built. Using Google authentication, it enables users to send and receive text-based messages in real time. The chat room supports both left-to-right and right-to-left text, as well as emojis. The message data is stored in a Firestore database and updated whenever a new message is sent. Since the core functionality of the web app is based on a tutorial (see <a href="#acknowledgments">Acknowledgments</a>), I spent a lot of time making it my own by adding new features (e.g. bidirectional text support, time stamps and usernames on messages) and by revamping the design to my liking.
 
 ### Built with
 
