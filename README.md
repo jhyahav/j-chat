@@ -51,7 +51,7 @@ Based on [React Firebase Chat App tutorial](https://fireship.io/lessons/react-fi
 
 [license-url]: https://github.com/jhyahav/portfolio/blob/master/LICENSE.txt
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=0a66c2
 [linkedin-url]: https://linkedin.com/in/jhyahav/
 [product-screenshot]: public/screenshot.png
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
