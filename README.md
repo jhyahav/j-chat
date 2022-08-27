@@ -49,7 +49,7 @@ Based on [React Firebase Chat App tutorial](https://fireship.io/lessons/react-fi
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[license-url]: https://github.com/jhyahav/jchat/blob/main/LICENSE.txt
+[license-url]: https://github.com/jhyahav/j-chat/blob/main/LICENSE.txt
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=0a66c2
 [linkedin-url]: https://linkedin.com/in/jhyahav/
